@@ -1,0 +1,194 @@
+.header
+  padding: 22px 0 39px 0
+  &-block
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    align-items: center
+  &-menu
+    display: block
+    transition: all 0.8s
+    position: fixed
+    z-index: 10
+    top: 0
+    left: -100%
+    background: $white-color
+    height: 100%
+    padding: 40px
+    &__list
+      list-style: none
+    &__item
+      margin-bottom: 10px
+      text-align: center
+    &__link
+      color: $black-color
+      font-size: 20px
+      padding: 10px 0
+      transition: all 0.5s
+      display: block
+      &:hover
+        color: $pink-color
+    &__close
+      width: 30px
+      height: 20px
+      position: absolute
+      top: 10px
+      right: 10px
+      transition: all 0.8s
+      &:hover
+        cursor: pointer
+      &::before, &::after
+        content: ''
+        width: 100%
+        height: 2px
+        background: $black-color
+        display: block
+        position: absolute
+        transition: all 0.8s
+      &::before
+        top: 0
+        left: 0
+      &::after
+        bottom: 0
+        left: 0
+      &.active
+        &::before
+          transform: rotate(45deg)
+          top: 8px
+        &::after
+          transform: rotate(-45deg)
+          bottom: 9px
+
+    &.active
+      left: 0
+      overflow-y: auto
+
+  &-burger
+    position: relative
+    width: 23px
+    height: 14px
+    &:hover
+      cursor: pointer
+    &.active
+      body
+        overflow: hidden
+    &::before,&::after
+      content: ''
+      width: 23px
+      display: block
+      background-color: $pink-color
+      height: 2px
+      position: absolute
+      left: 0
+    &::before
+      top: 0
+    &::after
+      bottom: 0
+    &_span
+      display: block
+      width: 18.5px
+      height: 2px
+      position: absolute
+      background: $pink-color
+      top: 45%
+      left: 0
+
+  &-logo
+    &__link
+      display: flex
+      align-items: center
+      flex-wrap: wrap
+      color: $black-color
+    &__img
+      margin-right: 10px
+  &-location
+    display: flex
+    justify-content: space-between
+    align-items: center
+    flex-wrap: wrap
+    &::before
+      content: ""
+      display: inline-block
+      width: 25px
+      height: 25px
+      background: url('../img/icons/location.png') center center/contain no-repeat
+      margin-right: 15px
+    &__info
+      position: relative
+      &:hover
+        cursor: pointer
+    &__address
+      position: relative
+      font:
+        style: normal
+        weight: 700
+  &-contacts
+    &__link
+      display: flex
+      justify-content: space-between
+      align-items: center
+      flex-wrap: wrap
+      color: $black-color
+      &::before
+        content: ""
+        width: 25px
+        height: 25px
+        background: url('../img/icons/phone.png') center center/contain no-repeat
+        display: inline-block
+        margin-right: 15px
+
+    &__number
+      font-weight: 700
+  &-call
+    &__link
+      display: flex
+      justify-content: space-between
+      align-items: center
+      padding: 17px
+
+.text-logo
+  &_main
+    font-weight: 700
+  &_small
+    margin-bottom: 5px
+.select
+  position: relative
+  transition: all 0.8s
+  width: 100%
+  &__head
+    display: inline-block
+    border-bottom: 1px solid $gray-opacity-color
+    font:
+      weight: 200
+      size: 12px
+    &:hover
+      cursor: pointer
+      transition: all 0.8s
+
+.basket
+  &__link
+    display: flex
+    justify-content: space-between
+    align-items: center
+    transition: all 0.8s
+    &:hover
+      .basket-img
+        border-color: $pink-color
+  &-img
+    width: 50px
+    height: 50px
+    border: 1px solid $gray-opacity-color
+    display: flex
+    align-items: center
+    justify-content: center
+    border-radius: 50%
+    margin-right: 15px
+    transition: all 0.5s
+  &-text
+    color: $black-color
+    &__counter
+      line-height: 15px
+      margin-bottom: 4px
+    &__price
+      line-height: 15px
+      font-weight: 700

@@ -1,0 +1,52 @@
+.shop
+    background: $pink-color
+    padding-top: 55px
+    padding-bottom: 75px
+    &__title
+        text-align: center
+        color: $white-color
+        margin-bottom: 62px
+    &-flex__container
+        justify-content: space-between
+    &-row
+        display: flex
+        justify-content: space-between
+        flex-wrap: wrap
+    &-column
+        flex: 1 1 calc(25% -30px)
+        background: $white-color
+        border-radius: 60px
+        padding: 6px 35px 25px 35px
+        margin-right: 30px
+        display: flex
+        justify-content: center
+        align-items: flex-start
+        &:last-child
+            margin-right: 0
+    &-content
+        text-align: center
+        line-height: 18.7px
+        &__title
+            margin-bottom: 5px
+            font:
+                size: 14px
+                weight: 700
+        &__label
+            margin-bottom: 4px
+            font:
+                size: 14px
+                weight: 200
+        &__price
+            margin-bottom: 16px
+            font:
+                weight: 700
+        &__price, &__link
+            display: block
+            margin: 0 auto
+    &__button
+        display: block
+        max-width: 280px
+        max-height: 50px
+        padding: 16px 24px
+        color: $black-color
+        margin: 90px auto 0 auto

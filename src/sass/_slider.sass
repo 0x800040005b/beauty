@@ -1,0 +1,51 @@
+.service
+  &-card
+    &__arrow
+      &_left, &_right
+        transition: all 0.8s
+        &:hover
+          cursor: pointer
+  & .slick
+    &-dots
+      justify-content: flex-end
+      margin-top: 20px
+
+.slick
+  &-slide
+    outline: none
+  &-list
+    overflow: hidden
+    padding-bottom: 10px
+    outline: none
+  &-track
+    display: flex
+  &-dots
+    display: flex
+    list-style: none
+    align-items: center
+    & li
+      width: auto
+      margin-right: 10px
+      &.slick-active
+        button
+          border: 1px solid $pink-color
+          border-radius: 50%
+          background: transparent
+          width: 20px
+          height: 20px
+      button
+        width: 10px
+        height: 10px
+        background: $pink-color
+        border-radius: 50%
+        border: none
+        display: block
+        font-size: 0
+        outline: none
+
+/* Slider Work In Section  Work */
+.work
+  &-slider
+    & .slick
+      &-dots
+        justify-content: center

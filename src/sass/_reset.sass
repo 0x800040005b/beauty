@@ -1,0 +1,92 @@
+@import "normalize"
+*, *::before, *::after
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+
+.container
+  width: 100%
+  max-width: 1140px
+  margin: 0 auto
+  padding: 0 10px
+body
+  font:
+    family: "Montserrat"
+    size: 14px
+  color: $black-color
+  line-height: 130%
+  letter-spacing: 4%
+
+h1
+  font-size: 28px
+  line-height: 130%
+h2
+  font-size: 24px
+h1,h2
+  letter-spacing: 5%
+a
+  text-decoration: none
+  outline: none
+img
+  max-width: 100%
+
+.path-color
+  transition: all 0.8s
+
+.logo-text
+  font-size: 18px
+  letter-spacing: 6%
+.text_small
+  font-size: 12px
+  letter-spacing: 4%
+  font-weight: 200
+
+.button
+  background: linear-gradient(180deg, #fff845 0%, $yellow-color 100%), $yellow-color
+  box-shadow: 0 3px 5px rgba(172, 139, 0, 0.6)
+  border-radius: 150px
+  &:hover
+    background: linear-gradient(180deg, #FFF845 40.97%, $yellow-color 100%), $yellow-color
+    box-shadow: 0 3px 3px rgba(172, 139, 0, 0.6)
+  &:active
+    background: $yellow-color
+    box-shadow: inset 0 3px 3px rgba(172, 139, 0, 0.7)
+.button_call__link
+  border: 1px solid $yellow-color
+  background: transparent
+  border-radius: 150px
+  width: 100%
+  max-width: 220px
+  max-height: 50px
+  transition: all 0.8s
+  color: $black-color
+  &:hover
+    border-color: $gray-light-color
+    transition: all 0.8s
+  &:active
+    background: $gray-light-color
+    border: 1px solid $gray-opacity-color
+    transition: all 0.8s
+    .button_call
+      &__text
+        color: $black-color
+    .path-color
+      fill: $white-color
+
+.flex-container
+  display: flex
+.title
+  color: $black-color
+  font:
+    size: 24px
+    weight: 700
+
+.pagination
+    justify-content: center
+    &__left, &__right:hover
+        cursor: pointer
+    &__left
+        margin-right: 30px
+    &__right
+        margin-left: 30px
+

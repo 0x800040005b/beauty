@@ -1,0 +1,89 @@
+.feedback
+    padding-top: 88px
+    padding-bottom: 28px
+    &-flex__container
+        justify-content: space-between
+        align-items: center
+        margin-bottom: 67px
+    &__title
+        margin-bottom: 45px
+    &__line
+        width: 177px
+        height: 1px
+        background: $gray-opacity-color
+    &-social
+        &__link
+            margin-right: 25px
+            display: inline-block
+            &:last-child
+                margin-right: 0
+    &-slide
+        display: flex
+        justify-content: space-between
+        border: 1px solid $gray-opacity-color
+        border-radius: 60px
+        background: $white-color
+        padding: 38px 42px
+        margin-right: 30px
+        &r
+            margin-bottom: 65px
+        &__link
+            display: none
+            line-height: 139%
+            color: $gray-light-color
+            text-decoration: underline
+            font:
+                size: 12px
+                weight: normal
+        &.slick-current
+            max-width: 653px
+            padding: 45px 35px
+            box-shadow: 10px 15px 30px rgba(0, 0, 0, 0.05)
+            .feedback-slide
+                &__author
+                    font-size: 14px
+                &__text
+                    font-size: 14px
+                &__link
+                    display: block
+        &:last-child
+            margin-right: 0
+        &__avatar
+            margin-right: 30px
+            min-width: 85px
+            min-height: 85px
+            border-radius: 50%
+        &__author
+            color: $pink-color
+            margin-bottom: 10px
+            font:
+                size: 12px
+                weight: 700
+        &__text
+            margin-bottom: 10px
+            line-height: 135%
+            color: $black-color
+            font:
+                size: 11px
+                weight: normal
+            span
+                width: 0
+                height: 0
+                visibility: hidden
+                opacity: 0
+                transition: all 0.5s
+                display: block
+                &.active
+                    width: auto
+                    height: auto
+                    opacity: 1
+                    visibility: visible
+    &-slider
+        &__pagination
+            justify-content: center
+        &__right
+            margin-left: 30px
+        &__left
+            margin-right: 30px
+        &__left,&__right:hover
+            cursor: pointer

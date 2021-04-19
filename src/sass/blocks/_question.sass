@@ -1,0 +1,72 @@
+.question
+    padding-top: 113px
+    padding-bottom: 125px
+    &-flex__container
+        display: flex
+        justify-content: space-between
+        flex-wrap: wrap
+    &-content
+        flex: 1 1 350px
+        padding-right: 60px
+        &__title
+            line-height: 32px
+            margin-bottom: 15px
+        &__text
+            line-height: 130%
+            margin-bottom: 30px
+    &-button
+        &__link
+            max-width: 230px
+            padding: 16px 28px
+            display: flex
+            justify-content: space-between
+            align-items: center
+            color: $black-color
+            max-height: 50px
+    &-list
+        flex: 1 1 750px
+    &s
+        list-style: none
+        &__link
+            display: flex
+            justify-content: space-between
+            padding: 12px 35px
+            &.active
+                .questions
+                    &-item
+                        &__text
+                            font-weight: bold
+
+        &-item
+            margin-bottom: 10px
+            border: 1px solid $gray-opacity-color
+            &__img
+                width: 12px
+                height: 27px
+                color: $pink-color
+                font:
+                    size: 20px
+                    weight: 700
+            &__text
+                color: $black-color
+                letter-spacing: 0.04em
+        &-answer
+            display: none
+            width: 0
+            height: 0
+            opacity: 0
+            visibility: hidden
+            transition: all 0.8s
+            padding: 16px 35px
+
+            font:
+                size: 12px
+                weight: 200
+            &.active
+                width: auto
+                height: auto
+                visibility: visible
+                opacity: 1
+                border-top: 1px solid $gray-opacity-color
+                display: block
+
