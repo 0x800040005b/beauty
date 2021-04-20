@@ -634,6 +634,9 @@ img {
     justify-content: space-between;
     flex-direction: column;
     position: relative; }
+    .service-card__wrapper {
+      position: relative;
+      z-index: 7; }
     .service-card__container {
       display: flex;
       justify-content: space-between;
