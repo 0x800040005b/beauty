@@ -1,4 +1,5 @@
 $(document).ready(function() {
+/*
     $('.slider').slick({
         infinite: true,
         slidesToShow: 1,
@@ -12,6 +13,7 @@ $(document).ready(function() {
         autoplaySpeed: 5000,
         cssEase: 'linear',
     });
+*/
     $('.work-slider').slick({
         arrows: true,
         dots: true,
