@@ -112,7 +112,7 @@ $(document).ready(function () {
     function getNewPhoto(src) {
         console.log(src);
             if(src != null && src !== ""){
-                src = src.replace('dist/img/sertificates/','img/sertificates/big-img/');
+                src = src.replace('img/sertificates/','dist/img/sertificates/big-img/');
                 src = src.replace('.png','.jpg');
                 console.log(src);
                 return src
