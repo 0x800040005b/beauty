@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(document).ready(function () {
     $('.service-text__slider').slick({
         infinite: true,
         slidesToShow: 1,
@@ -11,6 +11,9 @@ $(document).ready(function() {
         asNavFor: $('.service-slider__img'),
         autoplay: true,
         autoplaySpeed: 5000,
+        pauseOnHover: false,
+        pauseOnDotsHover: false,
+        pauseOnFocus: false,
 
     });
     $('.service-slider__img').slick({
@@ -26,7 +29,12 @@ $(document).ready(function() {
         asNavFor: $('.service-text__slider'),
         autoplay: true,
         autoplaySpeed: 5000,
+        pauseOnHover: false,
+        pauseOnDotsHover: false,
+        pauseOnFocus: false,
+
     });
+    let img = $('.overlay-slider__img>img');
 
     $('.work-slider').slick({
         arrows: true,
@@ -61,11 +69,11 @@ $(document).ready(function() {
         prevArrow: $('.feedback .pagination__left'),
         nextArrow: $('.feedback .pagination__right'),
         responsive: [{
-                breakpoint: 769,
-                settings: {
-                    slidesToShow: 1,
-                }
-            },
+            breakpoint: 769,
+            settings: {
+                slidesToShow: 1,
+            }
+        },
             {
                 breakpoint: 321,
                 settings: {
@@ -80,10 +88,35 @@ $(document).ready(function() {
         infinite: true,
         arrows: true,
         autoplay: true,
-        autoplaySpeed: 3000,
+        autoplaySpeed: 5000,
+        swipe: false,
         appendDots: $('.certificates .pagination__bullets'),
         prevArrow: $('.certificates .pagination__left'),
         nextArrow: $('.certificates .pagination__right'),
 
     });
+    $('.certificates-slide').click(function (event) {
+        let target = event.target;
+        let src = target.getAttribute('src');
+        img.attr('src', getNewPhoto(src));
+        $('.overlay-slider').toggleClass('active');
+
+
+    });
+    $('.overlay-slider__close').click(function () {
+        $('.overlay-slider').toggleClass('active');
+        img.attr('src', "");
+
+    });
+
+    function getNewPhoto(src) {
+        console.log(src);
+            if(src != null && src !== ""){
+                src = src.replace('img/sertificates/','img/sertificates/big-img/');
+                src = src.replace('.png','.jpg');
+                console.log(src);
+                return src
+            }
+            return src;
+    }
 });

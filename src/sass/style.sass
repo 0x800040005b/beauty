@@ -31,7 +31,51 @@ html,body
     left: 0
     opacity: 0
     visibility: hidden
-    z-index: 2
+    z-index: 7
+    &-slider
+        width: 100%
+        height: 100%
+        background: rgba($black-color, 0.2)
+        position: absolute
+        top: 0
+        left: 0
+        z-index: 7
+        opacity: 0
+        visibility: hidden
+        transition: all 0.5s
+        &__img
+            position: fixed
+            top: 50%
+            left: 50%
+            transform: translate(-50%, -50%)
+            overflow: visible
+        &__close
+            width: 30px
+            height: 30px
+            //background: $black-color
+            position: fixed
+            top: 20px
+            right: 20px
+            &:hover
+                cursor: pointer
+            &:before, &:after
+                content: ''
+                width: 100%
+                height: 2px
+                background: rgba($black-color, 0.4)
+                position: absolute
+                transition: all 0.5s
+            &::before
+                top: 25%
+                left: 0
+                transform: rotate(45deg)
+            &::after
+                top: 26%
+                left: 0
+                transform: rotate(-45deg)
+        &.active
+            opacity: 1
+            visibility: visible
     &.active
         visibility: visible
         opacity: 1
@@ -42,7 +86,5 @@ html,body
     top: 0
     left: 0
     width: 100%
-    //height: 100%
+    height: 100%
     z-index: 5
-.service-petals,.discount-petals
-    display: none

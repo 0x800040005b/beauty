@@ -1,24 +1,35 @@
 @media screen and ( max-width: 1200px  )
+    .parallax-wrapper
+        display: none
     .service
         &-block
             justify-content: center
+        &-slider
+            &__slide
+                max-width: 503px
+                display: flex
+                justify-content: center
+                &:before
+                    width: 100%
+                    height: 100%
+                    left: 0
+                    top: 2%
+
+            &__img
+                position: static
+                max-width: 503px
+        &-img
+            &__wrapper
+                width: 54%
+                margin: 0 30px
+
         &-card
-            &_img
-                &__wrapper
-                    display: none
-        &-row
-            flex-direction: column
+            &__block
+                justify-content: center
         &-column
             margin-right: 0
             margin-bottom: 10px
-        &-text
-            &__title
-                padding-right: 0
-    .slider
-        max-width: 100%
-        & .slick
-            &-dots
-                justify-content: center
+
 @media screen and ( max-width: 1024px )
     .shop
         &-column
@@ -42,10 +53,12 @@
         &-logo
             display: none
     .service
-        &-text
+        &-row
+            flex-direction: column
+        &-column
             max-width: 100%
 @media screen and ( max-width: 768px )
-    .service-petals,.discount-petals
+    .parallax-wrapper
         display: none
     .header
         &-contacts
@@ -66,13 +79,21 @@
         &-card
             padding: 55px 0 76px 58px
             border-radius: 0
-
             &__pagination
                 display: none
+        &-row
+            flex-direction: row
         &-text
             &__title
                 font-size: 20px
                 margin-bottom: 25px
+            &__slider
+                & .slick
+                    &-dots
+                        justify-content: center
+        &-slider
+            &__img
+                display: none
     .signup
         &__title
             &_normal
@@ -96,7 +117,7 @@
     .certificates
         &-row
             &_last
-                display: none
+                //display: none
     .question
         &-flex__container
             flex-direction: column
@@ -141,17 +162,11 @@
             margin-bottom: 20px
             &__info
                 font-size: inherit
-
-    .work
-        &-social
-            &__link
-                margin-right: 5px
-        &__title
-            margin-bottom: 30px
-            font-size: 18px
-        &__text
-            font-size: 12px
     .service
+        &-text
+            max-width: 100%
+            &__container
+                display: none
         &-row
             flex-direction: column
         &-column
@@ -162,6 +177,16 @@
                 flex-direction: column
         &-card
             border-radius: 0
+
+    .work
+        &-social
+            &__link
+                margin-right: 5px
+        &__title
+            margin-bottom: 30px
+            font-size: 18px
+        &__text
+            font-size: 12px
 
     /** Work Slider slide **/
     .work-slider
@@ -254,10 +279,11 @@
             &__container
                 justify-content: center
     .service
-        &-text
+        &-slide
             &__title
                 font-size: 15px
                 line-height: 25.5px
+
     .discount
         &-card
             padding: 40px
@@ -287,6 +313,11 @@
             &__text
                 font-size: 10px
 @media screen and ( max-width: 320px )
+    .service
+        &-slide
+            &__link
+                &_icon
+                    display: none
     .signup
         &__title
             &_normal
