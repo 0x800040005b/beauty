@@ -15,6 +15,8 @@
         justify-content: space-between
         flex-direction: column
         position: relative
+        &__block
+            justify-content: space-between
     &-text
         max-width: 509px
         &__container
@@ -26,6 +28,9 @@
         &__arrow
             &_left
                 margin-right: 20px
+            &_left,&_right
+                &:hover
+                    cursor: pointer
 
 
 .service

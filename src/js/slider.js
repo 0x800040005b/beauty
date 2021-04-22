@@ -1,19 +1,29 @@
 $(document).ready(function() {
-/*
-    $('.slider').slick({
+    $('.service-text__slider').slick({
         infinite: true,
         slidesToShow: 1,
         centerMode: true,
         centerPadding: '0px',
         arrows: true,
-        prevArrow: $('.service-card__arrow_left'),
-        nextArrow: $('.service-card__arrow_right'),
         dots: true,
-        autoplay: true,
-        autoplaySpeed: 5000,
-        cssEase: 'linear',
+        prevArrow: $('.service-text__arrow_left'),
+        nextArrow: $('.service-text__arrow_right'),
+        asNavFor: $('.service-slider__img'),
+
     });
-*/
+    $('.service-slider__img').slick({
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        variableWidth: true,
+        centerMode: true,
+        centerPadding: '20px',
+        arrows: false,
+        dots: false,
+        adaptiveHeight: true,
+        asNavFor: $('.service-text__slider'),
+    });
+
     $('.work-slider').slick({
         arrows: true,
         dots: true,
