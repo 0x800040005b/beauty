@@ -9,6 +9,8 @@ $(document).ready(function() {
         prevArrow: $('.service-text__arrow_left'),
         nextArrow: $('.service-text__arrow_right'),
         asNavFor: $('.service-slider__img'),
+        autoplay: true,
+        autoplaySpeed: 5000,
 
     });
     $('.service-slider__img').slick({
@@ -22,6 +24,8 @@ $(document).ready(function() {
         dots: false,
         adaptiveHeight: true,
         asNavFor: $('.service-text__slider'),
+        autoplay: true,
+        autoplaySpeed: 5000,
     });
 
     $('.work-slider').slick({

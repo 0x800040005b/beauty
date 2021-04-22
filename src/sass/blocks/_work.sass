@@ -9,13 +9,19 @@
     justify-content: space-between
     margin-bottom: 67px
   &-social
+    &__path
+      transition: all 0.5s
     &__container
       display: flex
       justify-content: space-between
     &__link
       margin-right: 25px
-      &:last-child
-        margin-right: 0
+      transition: all 0.5s
+      &:hover
+        .work-social__path
+          fill: $pink-color
+
+
   &-slider
     flex-direction: column
     &__item

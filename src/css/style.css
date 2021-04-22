@@ -688,13 +688,16 @@ img {
   .work-flex__container {
     justify-content: space-between;
     margin-bottom: 67px; }
+  .work-social__path {
+    transition: all 0.5s; }
   .work-social__container {
     display: flex;
     justify-content: space-between; }
   .work-social__link {
-    margin-right: 25px; }
-    .work-social__link:last-child {
-      margin-right: 0; }
+    margin-right: 25px;
+    transition: all 0.5s; }
+    .work-social__link:hover .work-social__path {
+      fill: #ff037e; }
   .work-slider {
     flex-direction: column; }
     .work-slider__item {
@@ -1353,6 +1356,8 @@ img {
 .service-img__picture {
   position: relative;
   border-radius: 50%; }
+  .service-img__picture img {
+    border-radius: 50%; }
 
 .service-img__circle {
   position: absolute;
