@@ -1530,6 +1530,28 @@ img {
   .service-column {
     max-width: 100%; } }
 
+@media screen and (max-width: 1139px) {
+  .discount-flex__container {
+    justify-content: center; }
+  .discount-card_img__wrapper {
+    display: none; } }
+
+@media screen and (max-width: 1008px) {
+  .feedback-slider {
+    max-width: 100%; }
+    .feedback-slider__left, .feedback-slider__right {
+      display: none; }
+  .feedback-slide {
+    margin: 0 40px; }
+  .feedback__line {
+    display: none; } }
+
+@media screen and (max-width: 927px) {
+  .service-text__slider .slick-dots {
+    justify-content: center; }
+  .service-slider__img {
+    display: none; } }
+
 @media screen and (max-width: 768px) {
   .parallax-wrapper {
     display: none; }
@@ -1553,23 +1575,11 @@ img {
   .service-text__title {
     font-size: 20px;
     margin-bottom: 25px; }
-  .service-text__slider .slick-dots {
-    justify-content: center; }
-  .service-slider__img {
-    display: none; }
   .signup__title_normal {
     font-size: 20px; }
   .signup__link {
     max-height: 50px; }
   .discount-card_img__wrapper {
-    display: none; }
-  .feedback-slider {
-    max-width: 100%; }
-    .feedback-slider__left, .feedback-slider__right {
-      display: none; }
-  .feedback-slide {
-    margin: 0 40px; }
-  .feedback__line {
     display: none; }
   .question-flex__container {
     flex-direction: column; }

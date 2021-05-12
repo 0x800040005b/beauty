@@ -57,6 +57,38 @@
             flex-direction: column
         &-column
             max-width: 100%
+@media screen and (max-width: 1139px)
+    .discount
+        &-flex
+            &__container
+                justify-content: center
+        &-card
+            &_img
+                &__wrapper
+                    display: none
+@media screen and (max-width: 1008px)
+    .feedback
+        &-slider
+            max-width: 100%
+            &__left,&__right
+                display: none
+        &-slide
+            margin: 0 40px
+        &__line
+            display: none
+
+
+@media screen and (max-width: 927px)
+    .service
+        &-text
+            &__slider
+                & .slick
+                    &-dots
+                        justify-content: center
+        &-slider
+            &__img
+                display: none
+
 @media screen and ( max-width: 768px )
     .parallax-wrapper
         display: none
@@ -87,13 +119,7 @@
             &__title
                 font-size: 20px
                 margin-bottom: 25px
-            &__slider
-                & .slick
-                    &-dots
-                        justify-content: center
-        &-slider
-            &__img
-                display: none
+
     .signup
         &__title
             &_normal
@@ -105,19 +131,6 @@
             &_img
                 &__wrapper
                     display: none
-    .feedback
-        &-slider
-            max-width: 100%
-            &__left,&__right
-                display: none
-        &-slide
-            margin: 0 40px
-        &__line
-            display: none
-    .certificates
-        &-row
-            &_last
-                //display: none
     .question
         &-flex__container
             flex-direction: column
